@@ -1,10 +1,11 @@
 ---
+//MainButtonZone.astro
 import { Icon } from "astro-icon/components";
 
 interface Props {
   color: string;
   name: string;
-  description: string; // Texto del tooltip
+  description: string;
   buttonId?: string;
   icon: string;
   hoverIcon?: string;
@@ -15,35 +16,39 @@ const { color, name, description, buttonId, icon, hoverIcon } = Astro.props;
 const finalHoverIcon = hoverIcon || icon;
 ---
 
-<div class="group/tooltip relative flex flex-wrap gap-2 justify-center">
-  <button
-    id={buttonId}
-    class="group relative w-full h-10 rounded-lg flex items-center justify-center gap-4 px-4 transition-all duration-300 active:scale-95 ease-out overflow-hidden"
+<div class="group/tooltip relative flex flex-wrap gap-2 justify-center w-full">
+  <a
+    href={buttonId}
+    class="group relative w-full h-12 md:h-10 rounded-lg flex items-center justify-center gap-2 md:gap-4 px-2 md:px-4 transition-all duration-300 active:scale-95 ease-out overflow-hidden"
     style={{ backgroundColor: color }}
   >
-    <div class="relative flex items-center justify-center w-6 h-6">
+    <div class="relative flex items-center justify-center w-6 h-6 shrink-0">
       <span
         class="absolute transition-all duration-300 ease-in-out transform opacity-100 scale-100 rotate-0 group-hover:opacity-0 group-hover:scale-50 group-hover:rotate-45"
       >
-        <Icon name={icon} width="24" height="24" color="#1a1b26" />
+        <Icon name={icon} class="w-5 h-5 md:w-6 md:h-6" color="#1a1b26" />
       </span>
 
       <span
         class="absolute transition-all duration-300 ease-in-out transform opacity-0 scale-50 -rotate-45 group-hover:opacity-100 group-hover:scale-100 group-hover:rotate-0"
       >
-        <Icon name={finalHoverIcon} width="24" height="24" color="#1a1b26" />
+        <Icon
+          name={finalHoverIcon}
+          class="w-5 h-5 md:w-6 md:h-6"
+          color="#1a1b26"
+        />
       </span>
     </div>
 
     <p
-      class="font-[900] whitespace-nowrap uppercase tracking-wider text-[#1a1b26] font-mono"
+      class="font-[900] whitespace-nowrap uppercase tracking-wider text-[#1a1b26] font-mono text-xs md:text-base"
     >
       {name}
     </p>
-  </button>
+  </a>
 
   <div
-    class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 px-3 py-1.5 text-xs text-white bg-slate-900 rounded-md shadow-lg pointer-events-none opacity-0 translate-y-2 transition-all duration-200 group-hover/tooltip:opacity-100 group-hover/tooltip:translate-y-0 z-50 whitespace-nowrap border border-slate-800"
+    class="hidden md:block absolute bottom-full mb-2 left-1/2 -translate-x-1/2 px-3 py-1.5 text-xs text-white bg-slate-900 rounded-md shadow-lg pointer-events-none opacity-0 translate-y-2 transition-all duration-200 group-hover/tooltip:opacity-100 group-hover/tooltip:translate-y-0 z-50 whitespace-nowrap border border-slate-800"
   >
     {description}
     <div

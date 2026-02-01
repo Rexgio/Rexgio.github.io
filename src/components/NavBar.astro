@@ -1,4 +1,5 @@
 ---
+//Navbar.astro
 import ThemeToggle from "./ThemeToggle.astro";
 import BackButton from "./BackButton.astro";
 import { Separator } from "./ui/separator.tsx";
@@ -8,9 +9,9 @@ const { button } = Astro.props;
 ---
 
 <nav class="flex flex-col w-full">
-  <div class="flex items-center justify-between px-6 py-1">
-    <BackButton text={button} />
-    <p class="text-m text-[#9777D0] font-bold font-mono">
+  <div class="flex items-center justify-between px-4 py-2 md:px-6 md:py-1">
+    <BackButton title={button} />
+    <p class="text-sm md:text-base text-[#9777D0] font-bold font-mono">
       <span class="!text-[#99C766]">~</span>/{title}
     </p>
     <ThemeToggle client:load />
