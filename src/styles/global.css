@@ -1,14 +1,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-
 @custom-variant dark (&:is(.dark *));
 
-
 @theme inline {
-  --font-mono: "Geist Mono", "Space Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --color-tokyo-bgDark: #1A1B26;
-  --font-mono: "Hack Nerd Font", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-mono: monospace;
+  --color-tokyo-bgDark: #1a1b26;
   --icon-size-md: 24px;
   --icon-size-lg: 32px;
   --radius-sm: calc(var(--radius) - 4px);
@@ -52,6 +49,7 @@
 }
 
 :root {
+  --font-mono: monospace;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -128,7 +126,6 @@
     @apply bg-background text-foreground;
   }
 }
-
 
 /* Opcional: clase para que los iconos se alineen siempre bien con el texto */
 @layer components {
