@@ -20,64 +20,84 @@ const ascii = `
 ---
 
 <Layout>
-  <header class="top-0 left-0 w-full z-10">
-    <NavBar title="portfolio/other" button="home" />
-  </header>
+    <header class="top-0 left-0 w-full z-10">
+        <NavBar title="portfolio/other" button="home" />
+    </header>
 
-  <main class="w-full min-h-screen flex justify-center px-4 md:px-0">
-    <div class="mt-2 w-3/5">
-      <div class="mb-5 flex justify-center w-full">
-        <pre
-          class="font-mono text-[1vw] md:text-[0.8vw] lg:text-[0.6vw] leading-[1] whitespace-pre text-[#9ECE6A] select-none antialiased">
+    <main class="w-full min-h-screen flex justify-center px-4 md:px-0">
+        <div class="mt-2 w-3/5">
+            <div class="mb-5 flex justify-center w-full">
+                <pre
+                    class="font-mono text-[1vw] md:text-[0.8vw] lg:text-[0.6vw] leading-[1] whitespace-pre text-[#9ECE6A] select-none antialiased">
 
 {ascii}
 
         </pre>
-      </div>
-      <div
-        class="font-mono grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-4 w-full"
-      >
-        <div
-          class="relative group flex flex-col h-42 border-[#9777D0] border-2 rounded-lg bg-neutral-200 dark:bg-tokyo-bgDark hover:bg-neutral-300 dark:hover:bg-neutral-900 duration-300 ease-out p-4"
-        >
-          <p class="font-[900] text-[#F7768E] mb-1">
-            <a
-              href="/projects/CCApp"
-              class="after:absolute after:inset-0 after:z-0"
+            </div>
+            <div
+                class="font-mono grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-4 w-full"
             >
-              CCApp
-            </a>
-          </p>
+                <div
+                    class="relative group flex flex-col h-42 border-[#9777D0] border-2 rounded-lg bg-neutral-200 dark:bg-tokyo-bgDark hover:bg-neutral-300 dark:hover:bg-neutral-900 duration-300 ease-out p-4"
+                >
+                    <p class="font-[900] text-[#F7768E] mb-1">
+                        <a
+                            href="/projects/CCApp"
+                            class="after:absolute after:inset-0 after:z-0"
+                        >
+                            CCApp
+                        </a>
+                    </p>
 
-          <div class="w-1/5 mb-2">
-            <hr class="border-[#9777D0] opacity-30" />
-          </div>
+                    <div class="w-1/5 mb-2">
+                        <hr class="border-[#9777D0] opacity-30" />
+                    </div>
 
-          <p class="text-sm z-10 pointer-events-none">
-            Simple gestion app for spanish brotherhoods.
-          </p>
+                    <p class="text-sm z-10 pointer-events-none">
+                        Simple gestion app for spanish brotherhoods.
+                    </p>
 
-          <div
-            class="flex gap-4 mt-auto text-xs font-bold text-[#7AA2F7] relative z-20"
-          >
-            <a
-              href="https://play.google.com/store/apps/details?id=com.forclus.Vigias&hl=es_419"
-              target="_blank"
-              class="underline decoration-dotted hover:text-[#9ECE6A] transition-colors"
-            >
-              Google Play.
-            </a>
-            <a
-              href="https://apps.apple.com/es/app/vigias-app/id6751107978"
-              target="_blank"
-              class="underline decoration-dotted hover:text-[#9ECE6A] transition-colors"
-            >
-              Apple Store.
-            </a>
-          </div>
+                    <div
+                        class="flex gap-4 mt-auto text-xs font-bold text-[#7AA2F7] relative z-20"
+                    >
+                        <a
+                            href="https://play.google.com/store/apps/details?id=com.forclus.Vigias&hl=es_419"
+                            target="_blank"
+                            class="underline decoration-dotted hover:text-[#9ECE6A] transition-colors"
+                        >
+                            Google Play.
+                        </a>
+                        <a
+                            href="https://apps.apple.com/es/app/vigias-app/id6751107978"
+                            target="_blank"
+                            class="underline decoration-dotted hover:text-[#9ECE6A] transition-colors"
+                        >
+                            Apple Store.
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="relative group flex flex-col h-42 border-[#9777D0] border-2 rounded-lg bg-neutral-200 dark:bg-tokyo-bgDark hover:bg-neutral-300 dark:hover:bg-neutral-900 duration-300 ease-out p-4"
+                >
+                    <p class="font-[900] text-[#F7768E] mb-1">
+                        <a
+                            href="/projects/CyberTools"
+                            class="after:absolute after:inset-0 after:z-0"
+                        >
+                            CyberTools
+                        </a>
+                    </p>
+
+                    <div class="w-1/5 mb-2">
+                        <hr class="border-[#9777D0] opacity-30" />
+                    </div>
+
+                    <p class="text-sm z-10 pointer-events-none">
+                        a basic cybersecurity portfolio
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
+    </main>
     <BottomBar />
-  </main>
 </Layout>
