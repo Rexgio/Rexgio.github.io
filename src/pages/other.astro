@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar.astro";
 import "../styles/global.css";
 import BottomBar from "../components/BottomBar.astro";
 import { Separator } from "../components/ui/separator.tsx";
+import GithubChart from "../components/GithubChart.tsx";
 
 const ascii = ` ██████╗ ████████╗██╗  ██╗███████╗██████╗ 
 ██╔═══██╗╚══██╔══╝██║  ██║██╔════╝██╔══██╗
@@ -14,38 +15,36 @@ const ascii = ` ██████╗ ████████╗██╗  █�
 ---
 
 <Layout>
-  <div class="h-screen w-full flex flex-col overflow-hidden">
-    <header class="sticky top-0 left-0 w-full z-10 bg-inherit">
-      <NavBar title="portfolio/other" button="home" />
-    </header>
+    <div class="h-screen w-full flex flex-col overflow-hidden">
+        <header class="sticky top-0 left-0 w-full z-10 bg-inherit">
+            <NavBar title="portfolio/other" button="home" />
+        </header>
 
-    <main class="w-full min-h-screen flex flex-col items-center px-4 md:px-0">
-      <div class="pt-10 w-full md:w-2/5">
-        <div class="mb-5 flex justify-center w-full">
-          <pre
-            class="font-mono text-[1vw] md:text-[0.8vw] lg:text-[0.6vw] leading-[1] whitespace-pre text-[#9ECE6A] select-none antialiased">
+        <main
+            class="w-full min-h-screen flex flex-col items-center px-4 md:px-0"
+        >
+            <div class="pt-10 w-full md:w-2/5">
+                <div class="mb-5 flex justify-center w-full">
+                    <pre
+                        class="font-mono text-[1vw] md:text-[0.8vw] lg:text-[0.6vw] leading-[1] whitespace-pre text-[#9ECE6A] select-none antialiased">
 
 {ascii}
 
         </pre>
-        </div>
+                </div>
 
-        <div class="font-mono text-sm">
-          <p class="font-[900] text-lg"># info.</p>
-          <Separator />
-          <p class="mt-2 mb-2">
-            this page will be to post some interesting docs, papers or links
-            that doesnt need to be redacted in the blog page.
-          </p>
-          <Separator />
-        </div>
-      </div>
-    </main>
+                <GithubChart username="Rexgio" client:load />
 
-    <footer
-      class="sticky bottom-0 left-0 w-full z-10 bg-inherit py-10 flex justify-center"
-    >
-      <BottomBar />
-    </footer>
-  </div>
+                <div class="font-mono text-sm mt-6">
+                    <Separator />
+                </div>
+            </div>
+        </main>
+
+        <footer
+            class="sticky bottom-0 left-0 w-full z-10 bg-inherit py-10 flex justify-center"
+        >
+            <BottomBar />
+        </footer>
+    </div>
 </Layout>
