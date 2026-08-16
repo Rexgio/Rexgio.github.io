@@ -1,3 +1,6 @@
 allowBuilds:
-  esbuild: false
-  sharp: false
+    esbuild: false
+    sharp: false
+
+minimumReleaseAgeExclude:
+    - "@iconify-json/material-symbols@1.2.89"
